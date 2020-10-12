@@ -1,30 +1,10 @@
 import React, { Component } from 'react';
 
 class AddUser extends Component {
-
-    state = {
-        name: "",
-        age: "",
-        phone: ""
-    }
-
-    handlerChange = (e) => {
-        this.setState({
-            [e.target.id]: e.target.value
-        })
-    }
-
-
-    handlerSubmit = (e) => {
-        e.preventDefault();
-
-        const { addUser } = this.props;
-        addUser(this.state);
-    }
-
     render() {
         return (
             <div className="group-addUser">
+                <h1>Update User</h1>
                 <form className="form-group" onSubmit={this.handlerSubmit}>
                     <div className="form-group">
                         <label htmlFor="name">Name:</label>
